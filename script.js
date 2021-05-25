@@ -11,7 +11,7 @@ window.addEventListener('resize',
     }
 )
 
-var calcKeys= ['=','π','^',7,8,9,"+",'sin',4,5,6,'-','cos',1,2,3,'*','tan',0,'.','/', '(','log',')','√']
+var calcKeys= ['=','π',7,8,9,"+",'sin',4,5,6,'-','cos',1,2,3,'*','tan',0,'.','/', '(','log',')','√','^']
 
 
 
@@ -74,7 +74,7 @@ function clearScreen(){
 manageMargin();
 
 var otherButtons = {
-    'C' : 'clearScreen()',
+    'CLEAR' : 'clearScreen()',
     'CE' : 'clearRecent()',
 }
 
