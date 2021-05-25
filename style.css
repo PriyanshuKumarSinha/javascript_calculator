@@ -1,0 +1,34 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #c50a0a;
+}
+.calculator-body{
+    margin: auto;
+    height: 500px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+}
+.calc-operators{
+    padding: 0 12px 12px 12px;
+}
+.calc-screen{
+    text-align: right;
+    height: 154px;
+    color: #606060;
+    font-size: 40px;
+    padding: 40px 20px 0px 20px;
+
+}
+.button1{
+    background-color: #DCDCDC;
+    color: #DCDCDC;
+    font-size: 30px;
+    border-radius: 50%;
+    border: none;
+    margin: 5px 5px;
+}
+.btn span{
+    color: #606060;
+}
