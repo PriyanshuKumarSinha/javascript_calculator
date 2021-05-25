@@ -4,7 +4,6 @@ function manageMargin(){
     div.style.marginTop = (window.innerHeight - divHeight) / 2  + 'px';
 }
 
-manageMargin();
 
 window.addEventListener('resize', 
     function(){
@@ -12,44 +11,29 @@ window.addEventListener('resize',
     }
 )
 
-var calcKeys= [7,8,9,"+",4,5,6,'-',1,2,3,'*',0,'.','/','=', '(',')']
+var calcKeys= ['=','π','^',7,8,9,"+",'sin',4,5,6,'-','cos',1,2,3,'*','tan',0,'.','/', '(','log',')','√']
 
-for (let i=0; i < calcKeys.length; i++ ){
-    createButtons('button1',calcKeys[i]);
-}
 
-createButtons('button1','√')
+
 function createButtons(className,value = '', func = 'fun(this.id)' ){
     var button = document.createElement('button');
 
-    button.setAttribute('class',`btn btn-secondary ${className}`);
+    button.setAttribute('class',`btn btn-lg ${className}`);
     button.setAttribute('id', `${value}`);
     button.setAttribute('onclick',func);
     
-    button.innerHTML = `<b> .<span>${value}</span>. </b>`;
-
-    if (value == '.' || value == '-' ){
-        button.innerHTML = `<b> _<span>${value}</span>_ </b>`;
-    }
+    button.innerHTML = `<b> <span>${value}</span> </b>`;
     
     var calcBody = document.querySelector('.calc-operators');
     calcBody.appendChild(button);
 
 }
-function clearButton(){
-    var button = document.createElement('button');
 
-    button.setAttribute('class',`btn btn-danger `);
-    button.setAttribute('onclick','clearScreen()');
-    button.style.margin = '10px';
-    
-    button.innerHTML = `Clear`;
-   
-    var calcBody = document.querySelector('.calc-operators');
-    calcBody.appendChild(button);
+
+
+function clearRecent(){
+    screen.innerText = screen.innerText.slice(0, screen.innerText.length-1) 
 }
-clearButton();
-
 var screen = document.querySelector('.calc-screen');
 
 var previousOperator;
@@ -68,7 +52,7 @@ function fun(buttonValue){
     else if(buttonValue === '√'){
         screen.innerHTML = Math.sqrt(screen.innerHTML).toFixed(8)
     }
-    else if(Number.isInteger(parseInt(buttonValue)) && previousOperator === '='){
+    else if(Number.isInteger(parseInt(buttonValue)) && (previousOperator === '=' || previousOperator === '√') ){
         clearScreen();
         screen.innerHTML += buttonValue;
 
@@ -85,4 +69,22 @@ function isFloat(n){
 
 function clearScreen(){
     screen.innerHTML = ""
+}
+
+manageMargin();
+
+var otherButtons = {
+    'C' : 'clearScreen()',
+    'CE' : 'clearRecent()',
+}
+
+var obKeys = Object.keys(otherButtons)
+
+for (let i=0; i < obKeys.length; i++ ){
+    createButtons('button1',obKeys[i],otherButtons[obKeys[i]]);
+}
+
+
+for (let i=0; i < calcKeys.length; i++ ){
+    createButtons('button1',calcKeys[i]);
 }
