@@ -66,8 +66,7 @@ function fun(buttonValue){
         previousOperator = "=";
     }
     else if(buttonValue === '√'){
-        previousOperator = "";
-        screen.innerHTML += 'Math.sqrt('
+        screen.innerHTML = Math.sqrt(screen.innerHTML).toFixed(8)
     }
     else if(Number.isInteger(parseInt(buttonValue)) && previousOperator === '='){
         clearScreen();
