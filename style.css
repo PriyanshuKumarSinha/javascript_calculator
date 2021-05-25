@@ -11,18 +11,18 @@ body{
     border-radius: 10px;
 }
 .calc-operators{
-    padding: 0 12px 12px 12px;
+    padding: 0 0px 0px 25px;
 }
 .calc-screen{
     text-align: right;
-    height: 154px;
+    height: 175px;
     color: #606060;
     font-size: 40px;
     padding: 40px 20px 0px 20px;
 
 }
 .button1{
-    background-color: #DCDCDC;
+    background-color: #ebe9e9;
     color: #DCDCDC;
     font-size: 25px;
     border-radius: 50%;
