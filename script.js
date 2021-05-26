@@ -11,7 +11,7 @@ window.addEventListener('resize',
     }
 )
 
-var calcKeys= ['=','π',7,8,9,"+",'sin',4,5,6,'-','cos',1,2,3,'*','tan',0,'.','/', '(','log',')','√','^']
+var calcKeys= ['=','π',7,8,9,"+",'sin',4,5,6,'-','cos',1,2,3,'*','tan',0,'.','/', '(','log',')','√','^', '%', 'ln']
 
 
 
@@ -41,7 +41,7 @@ function fun(buttonValue){
 
     if (buttonValue === '='){
         if(isFloat(eval(screen.innerHTML))){
-            screen.innerHTML = eval(screen.innerHTML).toFixed(2)
+            screen.innerHTML = eval(screen.innerHTML).toFixed(10)
         }
         else{
             screen.innerHTML = eval(screen.innerHTML)
@@ -50,7 +50,37 @@ function fun(buttonValue){
         previousOperator = "=";
     }
     else if(buttonValue === '√'){
-        screen.innerHTML = Math.sqrt(screen.innerHTML).toFixed(8)
+        screen.innerHTML = Math.sqrt(screen.innerHTML).toFixed(10)
+    }
+    else if(buttonValue === 'π'){
+        screen.innerHTML = (Math.PI).toFixed(10)
+    }
+    else if(buttonValue === 'sin'){
+        screen.innerHTML = (Math.sin((Math.PI/180) * screen.innerHTML)).toFixed(4)
+    }
+    else if(buttonValue === 'cos'){
+        screen.innerHTML = (Math.cos((Math.PI/180) * screen.innerHTML)).toFixed(4)
+    }
+    else if(buttonValue === '%'){
+        screen.innerHTML = screen.innerHTML / 100
+    }
+    else if(buttonValue === 'tan'){
+        if (parseInt(screen.innerHTML) < 90){
+            screen.innerHTML = (Math.tan((Math.PI/180) * screen.innerHTML)).toFixed(4)
+        }
+        else {
+            screen.innerHTML = 'Infinity';
+
+        }
+    }
+    else if(buttonValue === 'ln'){
+        screen.innerHTML = (Math.log(screen.innerHTML)).toFixed(10)
+    }
+    else if(buttonValue === 'log'){
+        screen.innerHTML = (Math.log10(screen.innerHTML)).toFixed(10)
+    }
+    else if(buttonValue === '^'){
+        screen.innerHTML += '**'
     }
     else if(Number.isInteger(parseInt(buttonValue)) && (previousOperator === '=' || previousOperator === '√') ){
         clearScreen();
@@ -81,7 +111,7 @@ var otherButtons = {
 var obKeys = Object.keys(otherButtons)
 
 for (let i=0; i < obKeys.length; i++ ){
-    createButtons('button1',obKeys[i],otherButtons[obKeys[i]]);
+    createButtons('btn-danger button2',obKeys[i],otherButtons[obKeys[i]]);
 }
 
 

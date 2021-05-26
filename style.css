@@ -32,6 +32,10 @@ body{
     border: none;
     margin: 5px 7px;
 }
-.btn span{
+.button1 span{
     color: #606060;
+}
+
+.button2{
+    margin: 0 5px;
 }
