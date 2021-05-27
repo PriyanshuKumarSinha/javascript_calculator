@@ -14,6 +14,7 @@ Screenshot :-
 - Math Object and eval() function
 
 All suggestions and feedback are welcome!😃
+(please update it on feedback.md, Thank you!)
 
 ## Author
 
