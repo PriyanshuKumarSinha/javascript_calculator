@@ -6,8 +6,8 @@ Hosted here :- https://javasriptcalculator.netlify.app/
 
 Screenshot :-
 
-<img width = "300px" src ="https://github.com/PriyanshuKumarSinha/javascript_calculator/blob/main/project_screenshot_mobile.jpg"></img>
-<img width = "300px" src ="https://github.com/PriyanshuKumarSinha/javascript_calculator/blob/main/project_screenshot_mobile.jpg"></img>
+<img width = "300px" src ="https://github.com/PriyanshuKumarSinha/javascript_calculator/blob/main/project_screenshot_mobile.jpg.jpg"></img>
+<img width = "300px" src ="https://github.com/PriyanshuKumarSinha/javascript_calculator/blob/main/project_screenshot_mobile.jpg.jpg"></img>
 
 ## Developed With
 
