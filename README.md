@@ -5,7 +5,7 @@ A basic kind of scientific calculator made with Vannila JS
 Hosted here :- https://javasriptcalculator.netlify.app/
 
 Screenshot :-
- <! --
+ <! ---
 <img src ="https://github.com/PriyanshuKumarSinha/javascript_calculator/blob/main/project_screenshot_desktop.png"></img> -->
 <img width = "300px" src ="https://github.com/PriyanshuKumarSinha/javascript_calculator/blob/main/project_screenshot_mobile.jpg"></img>
 <img width = "300px" src ="https://github.com/PriyanshuKumarSinha/javascript_calculator/blob/main/project_screenshot_mobile.jpg"></img>
